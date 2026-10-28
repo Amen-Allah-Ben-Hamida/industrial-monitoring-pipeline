@@ -1,0 +1,22 @@
+# Secrets
+.env
+
+# Node-RED runtime data (keep flows.json, package.json, settings.js)
+nodered/node_modules/
+nodered/.npm/
+nodered/.config.*.json
+nodered/flows_cred.json
+nodered/*.backup
+nodered/.*.backup
+nodered/context/
+nodered/lib/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
