@@ -20,19 +20,19 @@
 ## Step status
 | Step | Status |
 |---|---|
-| P00-S01 GitHub account | NOT STARTED |
-| P00-S02 Install/configure Git | NOT STARTED |
-| P00-S03 VS Code and settings | NOT STARTED |
-| P00-S04 WSL 2 + Docker Desktop | NOT STARTED |
-| P00-S05 Verify Docker | NOT STARTED |
-| P01-S01 Folder + git init | NOT STARTED |
-| P01-S02 .gitignore / .gitattributes / .env.example | NOT STARTED |
-| P01-S03 First commit | NOT STARTED |
-| P01-S04 GitHub repo + push | NOT STARTED |
-| P02-S01 Branch feature/mosquitto | NOT STARTED |
-| P02-S02 Broker config + compose | NOT STARTED |
-| P02-S03 Test pub/sub | NOT STARTED |
-| P02-S04 Commit, PR, merge | NOT STARTED |
+| P00-S01 GitHub account | COMPLETED |
+| P00-S02 Install/configure Git | COMPLETED |
+| P00-S03 VS Code and settings | COMPLETED |
+| P00-S04 WSL 2 + Docker Desktop | COMPLETED |
+| P00-S05 Verify Docker | COMPLETED |
+| P01-S01 Folder + git init | COMPLETED |
+| P01-S02 .gitignore / .gitattributes / .env.example | COMPLETED |
+| P01-S03 First commit | COMPLETED |
+| P01-S04 GitHub repo + push | COMPLETED |
+| P02-S01 Branch feature/mosquitto | COMPLETED |
+| P02-S02 Broker config + compose | COMPLETED |
+| P02-S03 Test pub/sub | COMPLETED |
+| P02-S04 Commit, PR, merge | COMPLETED |
 | P03-S01 Branch feature/modbus-simulator | NOT STARTED |
 | P03-S02 Simulator files | NOT STARTED |
 | P03-S03 Compose + build | NOT STARTED |
