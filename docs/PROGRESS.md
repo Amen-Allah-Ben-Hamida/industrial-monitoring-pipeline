@@ -33,10 +33,10 @@
 | P02-S02 Broker config + compose | COMPLETED |
 | P02-S03 Test pub/sub | COMPLETED |
 | P02-S04 Commit, PR, merge | COMPLETED |
-| P03-S01 Branch feature/modbus-simulator | NOT STARTED |
-| P03-S02 Simulator files | NOT STARTED |
-| P03-S03 Compose + build | NOT STARTED |
-| P03-S04 Verify, commit, PR, merge | NOT STARTED |
+| P03-S01 Branch feature/modbus-simulator | COMPLETED |
+| P03-S02 Simulator files | COMPLETED |
+| P03-S03 Compose + build | COMPLETED |
+| P03-S04 Verify, commit, PR, merge | COMPLETED |
 | Phases 4–8 | NOT STARTED (steps not yet written) |
 
 ## Actual project state
