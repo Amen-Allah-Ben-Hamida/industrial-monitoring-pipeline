@@ -16,3 +16,19 @@ services:
     ports:
       - "127.0.0.1:5020:5020"
     restart: unless-stopped
+
+    
+
+  nodered:
+      image: nodered/node-red:latest
+      container_name: nodered
+      ports:
+        - "127.0.0.1:1880:1880"
+      volumes:
+        - ./nodered:/data
+      environment:
+        - TZ=Africa/Tunis
+      depends_on:
+        - mosquitto
+        - modbus-sim
+      restart: unless-stopped
