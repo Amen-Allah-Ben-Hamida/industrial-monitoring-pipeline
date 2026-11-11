@@ -38,6 +38,27 @@
 | P03-S03 Compose + build | COMPLETED |
 | P03-S04 Verify, commit, PR, merge | COMPLETED |
 | Phases 4–8 | NOT STARTED (steps not yet written) |
+P04-S01	Branch feature/nodered-flows	COMPLETED
+P04-S02	Add Node-RED to compose and start it	COMPLETED
+P04-S03	Install the Modbus palette	COMPLETED
+P04-S04	Build the Modbus read flow	COMPLETED
+P04-S05	Convert to JSON and publish to MQTT	COMPLETED
+P04-S06	Verify messages in MQTT	COMPLETED
+P04-S07	Commit, PR, merge	NOT STARTED
+P05-S01	Branch feature/influxdb-storage	NOT STARTED
+P05-S02	Create the real .env file	NOT STARTED
+P05-S03	Add InfluxDB to compose and start it	NOT STARTED
+P05-S04	Install the InfluxDB palette	NOT STARTED
+P05-S05	Build the store flow (MQTT to InfluxDB)	NOT STARTED
+P05-S06	Verify data in InfluxDB	NOT STARTED
+P05-S07	Commit, PR, merge	NOT STARTED
+P06-S01	Branch feature/grafana-dashboard	NOT STARTED
+P06-S02	Grafana service and data source provisioning	NOT STARTED
+P06-S03	Log in and test the data source	NOT STARTED
+P06-S04	Build the dashboard	NOT STARTED
+P06-S05	Create the alert rule (temperature above 75 °C)	NOT STARTED
+P06-S06	Export dashboard backup and take screenshots	NOT STARTED
+P06-S07	Commit, PR, merge	NOT STARTED
 
 ## Actual project state
 - Repository: not created yet
@@ -55,3 +76,4 @@ None.
 ## Measured results (fill in during Phase 7; use only real numbers on the CV)
 - Values stored per minute: ___
 - Pipeline latency (Node-RED read → MQTT → Node-RED subscriber): ___ ms
+11 Nov 22:53:46 - [info] Node-RED version: v5.0.9
