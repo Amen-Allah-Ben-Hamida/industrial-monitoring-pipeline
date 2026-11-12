@@ -69,6 +69,21 @@
         "sessionExpiry": ""
     },
     {
+        "id": "d63d383501622f47",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": 8086,
+        "protocol": "http",
+        "database": "database",
+        "name": "",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://influxdb:8086",
+        "timeout": 10,
+        "rejectUnauthorized": true
+    },
+    {
         "id": "dc0dc9c8f2f2d76a",
         "type": "modbus-read",
         "z": "53da686c16496355",
@@ -133,8 +148,7 @@
         "y": 540,
         "wires": [
             [
-                "3d1ee12e66fbfeef",
-                "dd2bce811a62b638"
+                "3d1ee12e66fbfeef"
             ]
         ]
     },
@@ -154,6 +168,82 @@
         "broker": "b3b64f6e9dedaa73",
         "x": 890,
         "y": 660,
+        "wires": []
+    },
+    {
+        "id": "b3b0cbf30b6b99e1",
+        "type": "mqtt in",
+        "z": "53da686c16496355",
+        "name": "",
+        "topic": "factory/line1/+/telemetry",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "b3b64f6e9dedaa73",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 360,
+        "y": 840,
+        "wires": [
+            [
+                "f0a594650c9e0234"
+            ]
+        ]
+    },
+    {
+        "id": "f0a594650c9e0234",
+        "type": "function",
+        "z": "53da686c16496355",
+        "name": "Compute latency and format",
+        "func": "  const d = msg.payload;\n  const latency = Date.now() - d.ts_read;\n  msg.payload = [\n      {\n          temperature: d.temperature,\n          rpm: d.rpm,\n          fault: d.fault,\n          latency_ms: latency\n      },\n      { machine: d.machine }\n  ];\n  return msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 840,
+        "wires": [
+            [
+                "7b5139a296e96914",
+                "ce9ddfacac5f334c"
+            ]
+        ]
+    },
+    {
+        "id": "7b5139a296e96914",
+        "type": "influxdb out",
+        "z": "53da686c16496355",
+        "influxdb": "d63d383501622f47",
+        "name": "",
+        "measurement": "machine_telemetry",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "lab",
+        "bucket": "factory",
+        "x": 1110,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "ce9ddfacac5f334c",
+        "type": "debug",
+        "z": "53da686c16496355",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 980,
         "wires": []
     }
 ]

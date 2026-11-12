@@ -44,14 +44,14 @@ P04-S03	Install the Modbus palette	COMPLETED
 P04-S04	Build the Modbus read flow	COMPLETED
 P04-S05	Convert to JSON and publish to MQTT	COMPLETED
 P04-S06	Verify messages in MQTT	COMPLETED
-P04-S07	Commit, PR, merge	NOT STARTED
-P05-S01	Branch feature/influxdb-storage	NOT STARTED
-P05-S02	Create the real .env file	NOT STARTED
-P05-S03	Add InfluxDB to compose and start it	NOT STARTED
-P05-S04	Install the InfluxDB palette	NOT STARTED
-P05-S05	Build the store flow (MQTT to InfluxDB)	NOT STARTED
-P05-S06	Verify data in InfluxDB	NOT STARTED
-P05-S07	Commit, PR, merge	NOT STARTED
+P04-S07	Commit, PR, merge	COMPLETED
+P05-S01	Branch feature/influxdb-storage	COMPLETED
+P05-S02	Create the real .env file	COMPLETED
+P05-S03	Add InfluxDB to compose and start it	COMPLETED
+P05-S04	Install the InfluxDB palette	COMPLETED
+P05-S05	Build the store flow (MQTT to InfluxDB)	COMPLETED
+P05-S06	Verify data in InfluxDB	COMPLETED
+P05-S07	Commit, PR, merge	COMPLETED
 P06-S01	Branch feature/grafana-dashboard	NOT STARTED
 P06-S02	Grafana service and data source provisioning	NOT STARTED
 P06-S03	Log in and test the data source	NOT STARTED
