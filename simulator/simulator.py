@@ -43,7 +43,7 @@ async def main():
     store = ModbusSlaveContext(
         hr=ModbusSequentialDataBlock(0, [0] * 10), zero_mode=True
     )
-    context = ModbusServerContext(slaves=store, single=True)
+    context = ModbusServerContext(slaves=store, single=True)    
     updater = asyncio.create_task(update_registers(context))
     log.info("Modbus TCP server listening on %s:%d", HOST, PORT)
     await StartAsyncTcpServer(context=context, address=(HOST, PORT))
